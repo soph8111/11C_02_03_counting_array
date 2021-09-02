@@ -3,22 +3,23 @@
 const array = [];
 let counter;
 
-init();
+loop();
 
 function init() {
-    counter = -1;
-    loop();
+  counter = -1;
+  loop();
 }
 
 function loop() {
-    counter++;
+  counter++;
 
-    setTimeout(loop, 650);
-    array.unshift(counter);
+  setTimeout(loop, 650);
+  array.unshift(counter);
 
-    if (array.length > 9) {
-        array.pop();
-        }
+  if (array.length > 9) {
+    // This part you can also do with slice(1, 9);
+    array.pop();
+  }
 
-    console.log(array);
+  console.log(array);
 }
